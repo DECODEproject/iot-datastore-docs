@@ -1,0 +1,5 @@
+type: integer
+description: >-
+  The maximum number of events to be returned in the response. An error will be
+  returned if more than the maximum of 1000 events is requested.
+default: 500

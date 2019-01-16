@@ -1,0 +1,7 @@
+type: string
+description: >-
+  An opaque string that encodes pagination information that the server is able
+  to interpret. This pagination string cannot be calculated by the client,
+  rather this value can only be supplied by the server in a response to a read
+  request.
+example: l66G9M76XeWDSYf2Fu1tVRTau4OfCD7V7vAAMk6M00DwR0jMLnzvzVw8qzVgBLxv

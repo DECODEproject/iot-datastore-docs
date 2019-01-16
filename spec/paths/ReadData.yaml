@@ -2,12 +2,18 @@ post:
   tags:
     - Read
   summary: Read encrypted events
-  description: |
-    This is a description
+  description: >
+    Endpoint which allows a caller to read encrypted events from the datastore.
+    Events are encrypted using AES-GCM in block encryption mode, so only an
+    entity with the correct private key will be able to decrypt the data.
   operationId: read
   responses:
     '200':
-      description: Successful read
+      description: Successful read of data from the datastore
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ReadResponse'
   requestBody:
     content:
       application/json:

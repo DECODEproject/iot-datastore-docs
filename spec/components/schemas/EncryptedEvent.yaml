@@ -1,0 +1,15 @@
+type: object
+properties:
+  event_time:
+    description: >-
+      RFC3339 timestamp representing the time at which the event was received by
+      the datastore.
+    type: string
+    format: date-time
+  data:
+    description: Encrypted bytes encoded into a Base64 string
+    type: string
+    example: W1wszfBvAco+UAv52ntU1Zs4aO6OswwRWGqaB7uMQjWw3pPiRsolvgQZhqRBZjBZ...
+required:
+  - event_time
+  - data

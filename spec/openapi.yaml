@@ -41,9 +41,6 @@ info:
     * Go - https://github.com/thingful/twirp-datastore-go
 
     * Python - https://pypi.org/project/decode-datastore-client/
-externalDocs:
-  description: Find out how to create Github repo for your OpenAPI spec.
-  url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
   - name: Read
     description: Operations to read data from the datastore
