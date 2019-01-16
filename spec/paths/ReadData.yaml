@@ -1,0 +1,15 @@
+post:
+  tags:
+    - Read
+  summary: Read encrypted events
+  description: |
+    This is a description
+  operationId: read
+  responses:
+    '200':
+      description: Successful read
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/ReadRequest'

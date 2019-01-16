@@ -1,0 +1,37 @@
+type: object
+properties:
+  start_time:
+    description: >
+      RFC3339 timestamp representing the start of an interval for which we want
+      to read data. It is an error for this value to be in the future or to be
+      after the end_time field if provided.
+    type: string
+    format: date-time
+  end_time:
+    description: >
+      RFC3339 timestamp representing the end of an interval for which we want to
+      read data. It is an error for this value to be in the future. If omitted
+      it defaults 'now'.
+    type: string
+    format: date-time
+  page_cursor:
+    description: >
+      An opaque string that encodes pagination information that the server is
+      able to interpret. This pagination string cannot be calculated by the
+      client, rather this value can only be supplied by the server in a response
+      to a read request.
+    type: string
+    example: l66G9M76XeWDSYf2Fu1tVRTau4OfCD7V7vAAMk6M00DwR0jMLnzvzVw8qzVgBLxv
+  page_size:
+    description: >-
+      The maximum number of events to be returned in the response. An error will
+      be returned if more than the maximum of 1000 events is requested.
+    default: 500
+    type: integer
+  policy_id:
+    description: The unique identifier of the policy for which data is being requested
+    type: string
+    example: BxnMkRZI
+required:
+  - start_time
+  - policy_id

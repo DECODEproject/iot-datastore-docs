@@ -1,62 +1,53 @@
 openapi: 3.0.0
 info:
   version: 1.0.0
-  title: Example.com
-  termsOfService: 'https://example.com/terms/'
+  title: DECODE Datastore JSON API
   contact:
-    email: contact@example.com
-    url: 'http://example.com/contact'
+    email: support@thingful.net
+    url: 'https://www.thingful.net/contact'
   license:
-    name: Apache 2.0
-    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+    name: GNU Affero General Public License
+    url: 'https://www.gnu.org/licenses/agpl.html'
   x-logo:
     url: 'https://apis.guru/openapi-template/logo.png'
   description: >
-    This is an **example** API to demonstrate features of OpenAPI specification
+    This is some documentation for the Encrypted datastore component developed
+    as part of the IoT pilot
+
+    for [DECODE](https://decodeproject.eu).
+
 
     # Introduction
 
-    This specification is intended to to be a good starting point for describing
-    your API in 
+    The server implementation was created using a tool called
+    [Twirp](https://twitchtv.github.io/twirp/),
 
-    [OpenAPI/Swagger
-    format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md).
+    which by uses [Protocol
+    Buffers](https://developers.google.com/protocol-buffers/) in order to
 
-    It also demonstrates features of
-    [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo)
-    tool and 
+    specify the interface. For some programming languages we are able to
+    generate a client directly from this
 
-    [ReDoc](https://github.com/Rebilly/ReDoc) documentation engine. So beyond
-    the standard OpenAPI syntax we use a few 
+    definition, however for clients where that tooling isn't yet available, this
+    document defines the JSON over
 
-    [vendor
-    extensions](https://github.com/Rebilly/ReDoc/blob/master/docs/redoc-vendor-extensions.md).
+    HTTP interface that the service also exposes.
 
 
-    # OpenAPI Specification
+    If you are developing a client application in Go or Python, you should use
+    the generated client libraries:
 
-    The goal of The OpenAPI Specification is to define a standard,
-    language-agnostic interface to REST APIs which
 
-    allows both humans and computers to discover and understand the capabilities
-    of the service without access to source
+    * Go - https://github.com/thingful/twirp-datastore-go
 
-    code, documentation, or through network traffic inspection. When properly
-    defined via OpenAPI, a consumer can 
-
-    understand and interact with the remote service with a minimal amount of
-    implementation logic. Similar to what
-
-    interfaces have done for lower-level programming, OpenAPI removes the
-    guesswork in calling the service.
+    * Python - https://pypi.org/project/decode-datastore-client/
 externalDocs:
   description: Find out how to create Github repo for your OpenAPI spec.
   url: 'https://github.com/Rebilly/generator-openapi-repo'
 tags:
-  - name: Echo
-    description: Example echo operations
+  - name: Read
+    description: Operations to read data from the datastore
   - name: User
-    description: Operations about user
+    description: Operations to write data from the datastore
 servers:
-  - url: 'http://example.com/api/v1'
-  - url: 'https://example.com/api/v1'
+  - url: 'https://datastore.decodeproject.eu/twirp/decode.iot.datastore.Datastore/'
