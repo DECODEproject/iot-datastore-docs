@@ -8,6 +8,10 @@ post:
     also developed as part of DECODE, meaning that only an entity with the
     correct private key will be able to decrypt any data read from the
     datastore.
+
+
+    A `Content-Type` header of `application/json` must be included else the
+    server will try to decode using protocol buffers.
   operationId: read
   responses:
     '200':

@@ -13,3 +13,4 @@ properties:
 required:
   - device_token
   - policy_id
+  - data

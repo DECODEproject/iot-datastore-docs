@@ -1,0 +1,10 @@
+type: string
+description: String indicating the type of the error
+enum:
+  - internal
+  - bad_request
+  - unknown
+  - invalid_argument
+  - not_found
+  - unavailable
+example: bad_request
