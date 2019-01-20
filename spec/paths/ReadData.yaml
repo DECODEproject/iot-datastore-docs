@@ -4,8 +4,10 @@ post:
   summary: Read encrypted events
   description: >
     Endpoint which allows a caller to read encrypted events from the datastore.
-    Events are encrypted using AES-GCM in block encryption mode, so only an
-    entity with the correct private key will be able to decrypt the data.
+    Events are encrypted using a tool called Zenroom (https://zenroom.dyne.org),
+    also developed as part of DECODE, meaning that only an entity with the
+    correct private key will be able to decrypt any data read from the
+    datastore.
   operationId: read
   responses:
     '200':

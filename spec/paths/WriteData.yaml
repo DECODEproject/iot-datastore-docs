@@ -1,0 +1,22 @@
+post:
+  tags:
+    - Write
+  summary: Write encrypted events
+  description: >
+    Endpoint which allows a caller to write encrypted events to the datastore.
+    The caller is responsible for encrypted the events before sending them to
+    the datastore. For our purposes we encode messages using Zenroom before
+    writing to the datastore.
+  operationId: write
+  responses:
+    '200':
+      description: Successful write to the datastore
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/WriteResponse'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/WriteRequest'

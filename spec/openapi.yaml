@@ -11,7 +11,7 @@ info:
   x-logo:
     url: 'https://apis.guru/openapi-template/logo.png'
   description: >
-    This is some documentation for the Encrypted datastore component developed
+    This is some documentation for the Encrypted Datastore component developed
     as part of the IoT pilot
 
     for [DECODE](https://decodeproject.eu).

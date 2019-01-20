@@ -1,0 +1,3 @@
+description: A unique identifier for a device
+type: string
+example: ad52ba
