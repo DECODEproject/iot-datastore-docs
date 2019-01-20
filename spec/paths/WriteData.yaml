@@ -1,6 +1,6 @@
 post:
   tags:
-    - Write
+    - Write Events
   summary: Write encrypted events
   description: >
     Endpoint which allows a caller to write encrypted events to the datastore.

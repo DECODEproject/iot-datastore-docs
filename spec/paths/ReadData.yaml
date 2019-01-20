@@ -1,6 +1,6 @@
 post:
   tags:
-    - Read
+    - Read Events
   summary: Read encrypted events
   description: >
     Endpoint which allows a caller to read encrypted events from the datastore.
