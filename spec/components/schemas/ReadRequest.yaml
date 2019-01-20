@@ -1,0 +1,25 @@
+type: object
+properties:
+  start_time:
+    description: >
+      RFC3339 timestamp representing the start of an interval for which we want
+      to read data. It is an error for this value to be in the future or to be
+      after the end_time field if provided.
+    type: string
+    format: date-time
+  end_time:
+    description: >
+      RFC3339 timestamp representing the end of an interval for which we want to
+      read data. It is an error for this value to be in the future. If omitted
+      it defaults 'now'.
+    type: string
+    format: date-time
+  page_cursor:
+    $ref: '#/components/schemas/Cursor'
+  page_size:
+    $ref: '#/components/schemas/PageSize'
+  policy_id:
+    $ref: '#/components/schemas/PolicyId'
+required:
+  - start_time
+  - policy_id

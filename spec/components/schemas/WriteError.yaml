@@ -1,0 +1,15 @@
+type: object
+properties:
+  code:
+    $ref: '#/components/schemas/ErrorCode'
+  msg:
+    type: string
+    description: Short message describing the error
+    example: policy_id is required
+  meta:
+    type: object
+    description: >-
+      Object containing key/value pairs of metadata describing the error in more
+      detail
+    example:
+      argument: policy_id

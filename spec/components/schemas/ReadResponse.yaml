@@ -1,0 +1,10 @@
+type: object
+properties:
+  events:
+    type: array
+    items:
+      $ref: '#/components/schemas/EncryptedEvent'
+  next_page_cursor:
+    $ref: '#/components/schemas/Cursor'
+  policy_id:
+    $ref: '#/components/schemas/PolicyId'

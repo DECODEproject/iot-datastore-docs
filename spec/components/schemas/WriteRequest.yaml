@@ -1,0 +1,16 @@
+type: object
+properties:
+  data:
+    description: String containing encrypted bytes created by Zenroom
+    type: string
+    format: byte
+    example: >-
+      VEJFFpJ+fnvsllqXAE07vLbcPX6nc+rg4LAVH9wn+qhZxHn4Qqt+n6t1FSwF801GOcqIsmcFw0tHSkczkLkvyZxu7yVGN0T/HibSiogVpskKO4AH0qfjZo6V/OSqshz7jxWtUVVk7i7q1wSRkriFmretKIX+wV44Q/k0IxbZjiU=
+  device_token:
+    $ref: '#/components/schemas/DeviceToken'
+  policy_id:
+    $ref: '#/components/schemas/PolicyId'
+required:
+  - device_token
+  - policy_id
+  - data
