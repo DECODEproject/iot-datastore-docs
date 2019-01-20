@@ -20,6 +20,23 @@ post:
         application/json:
           schema:
             $ref: '#/components/schemas/ReadResponse'
+    '400':
+      description: Bad request sent by client
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/WriteError'
+    5XX:
+      description: Unexpected server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/WriteError'
+          example:
+            code: internal
+            msg: database is unavailable
+            meta:
+              cause: '*pg.Error'
   requestBody:
     content:
       application/json:
