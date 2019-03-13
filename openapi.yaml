@@ -115,6 +115,10 @@ paths:
               $ref: '#/components/schemas/WriteRequest'
 components:
   schemas:
+    CommunityId:
+      description: The unique identifier of the comunity for which data is being requested
+      type: string
+      example: BxnMkRZI
     Cursor:
       type: string
       description: 'An opaque string that encodes pagination information that the server is able to interpret. This pagination string cannot be calculated by the client, rather this value can only be supplied by the server in a response to a read request.'
@@ -152,10 +156,6 @@ components:
       type: integer
       description: The maximum number of events to be returned in the response. An error will be returned if more than the maximum of 1000 events is requested.
       default: 500
-    PolicyId:
-      description: The unique identifier of the policy for which data is being requested
-      type: string
-      example: BxnMkRZI
     ReadRequest:
       type: object
       properties:
@@ -173,8 +173,8 @@ components:
           $ref: '#/components/schemas/Cursor'
         page_size:
           $ref: '#/components/schemas/PageSize'
-        policy_id:
-          $ref: '#/components/schemas/PolicyId'
+        community_id:
+          $ref: '#/components/schemas/CommunityId'
       required:
         - start_time
         - policy_id
@@ -187,8 +187,8 @@ components:
             $ref: '#/components/schemas/EncryptedEvent'
         next_page_cursor:
           $ref: '#/components/schemas/Cursor'
-        policy_id:
-          $ref: '#/components/schemas/PolicyId'
+        community_id:
+          $ref: '#/components/schemas/CommunityId'
     WriteError:
       type: object
       properties:
@@ -197,12 +197,12 @@ components:
         msg:
           type: string
           description: Short message describing the error
-          example: policy_id is required
+          example: community_id is required
         meta:
           type: object
           description: Object containing key/value pairs of metadata describing the error in more detail
           example:
-            argument: policy_id
+            argument: community_id
     WriteRequest:
       type: object
       properties:
@@ -213,11 +213,11 @@ components:
           example: VEJFFpJ+fnvsllqXAE07vLbcPX6nc+rg4LAVH9wn+qhZxHn4Qqt+n6t1FSwF801GOcqIsmcFw0tHSkczkLkvyZxu7yVGN0T/HibSiogVpskKO4AH0qfjZo6V/OSqshz7jxWtUVVk7i7q1wSRkriFmretKIX+wV44Q/k0IxbZjiU=
         device_token:
           $ref: '#/components/schemas/DeviceToken'
-        policy_id:
-          $ref: '#/components/schemas/PolicyId'
+        community_id:
+          $ref: '#/components/schemas/CommunityId'
       required:
         - device_token
-        - policy_id
+        - community_id
         - data
     WriteResponse:
       type: object
