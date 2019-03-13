@@ -6,5 +6,5 @@ properties:
       $ref: '#/components/schemas/EncryptedEvent'
   next_page_cursor:
     $ref: '#/components/schemas/Cursor'
-  policy_id:
-    $ref: '#/components/schemas/PolicyId'
+  community_id:
+    $ref: '#/components/schemas/CommunityId'

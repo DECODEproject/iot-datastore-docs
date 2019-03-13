@@ -18,8 +18,8 @@ properties:
     $ref: '#/components/schemas/Cursor'
   page_size:
     $ref: '#/components/schemas/PageSize'
-  policy_id:
-    $ref: '#/components/schemas/PolicyId'
+  community_id:
+    $ref: '#/components/schemas/CommunityId'
 required:
   - start_time
   - policy_id

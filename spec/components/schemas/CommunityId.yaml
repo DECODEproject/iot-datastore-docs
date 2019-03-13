@@ -1,0 +1,3 @@
+description: The unique identifier of the comunity for which data is being requested
+type: string
+example: BxnMkRZI
